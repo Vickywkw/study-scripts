@@ -12,9 +12,11 @@ cat>/etc/systemd/system/shadowsocks-server.service<<EOF
 [Unit]
 Description=Shadowsocks Server
 After=network.target
+
 [Service]
 ExecStart=/usr/bin/ssserver -c /etc/ss-config.json
 Restart=always
+
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -64,9 +66,11 @@ cat>/etc/systemd/system/kcp-server.service<<EOF
 [Unit]
 Description=Kcptun server
 After=network.target
+
 [Service]
 ExecStart=/usr/bin/server_linux_amd64 -c /etc/kcp-config.json
 Restart=always
+
 [Install]
 WantedBy=multi-user.target
 EOF
