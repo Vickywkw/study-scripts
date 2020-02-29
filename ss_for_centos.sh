@@ -58,7 +58,7 @@ cat>/etc/kcp-config.json<<EOF
     "target":"127.0.0.1:$port",
     "key":"$pass",
     "crypt":"aes-192",
-    "mode":"fast2"
+    "mode":"fast3"
 }
 EOF
 
